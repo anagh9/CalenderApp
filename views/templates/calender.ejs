@@ -1,0 +1,38 @@
+<%-include('partials/header')-%>
+<style>
+    .cal{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    li{
+        list-style: none;
+        font-size: 20px;
+        align-items: center;
+        border: 1px solid black;
+        padding: 30px;
+        margin-bottom: 20px;
+    }
+    body{
+        background-color: #343a40;
+        padding-top: 100px;
+    }
+    
+</style>
+<div class="main">
+    <!-- calender  -->
+   <h4 class="p-3 mb-2 bg-primary text-white me-3"><%=all_about_date%> <a class="btn btn-info me-3" href="/">Mark Date</a> </h4>
+    <h1 style="display: none;"><%=all%></h1>
+    <div class="cal ">
+        <% for(let i=0;i< all.length;i++ ){%>
+            <% if(i%2 == 0){%>
+                <li class="bg-success"><%=all[i].date%></li>
+            <%}else{%>
+                <li class="bg-info"><%=all[i].date%></li>
+            <%}%>
+
+        <%}%>
+    </div>    
+</div>
+<script src="static/script/calenderscript.js"></script>
+<%-include('partials/footer')-%>
