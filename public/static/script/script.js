@@ -50,7 +50,7 @@ document.querySelectorAll('td').forEach((td)=>{
 
 const sendData = (data)=>{
     console.log(data);
-    fetch('http://localhost:3000/',{
+    fetch('https://calender9-app.herokuapp.com/',{
         method: "POST",
         body:JSON.stringify({
             date:data
